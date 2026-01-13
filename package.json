@@ -1,0 +1,33 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "private": false,
+  "description": "CLI for getting weather",
+  "keywords": [
+    "cli",
+    "weather",
+    "nodejs",
+    "nkolosov"
+  ],
+  "license": "ISC",
+  "author": "Niktia Kolosov",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": "./index.js",
+  "man": [
+    "./README.md  "
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://nkolosov.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NKolosov097"
+  },
+  "bugs": {
+    "url": "https://github.com/NKolosov097",
+    "email": "nikita.kolosov.spam@gmail.com"
+  }
+}
