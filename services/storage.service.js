@@ -10,7 +10,7 @@ const isFileExist = async (path) => {
     return true
   } catch (error) {
     printError(
-      `[storage.service.js] with getting statistic for file with path: ${path}`
+      `[storage.service.js] with getting statistic for file with path: ${path}`,
     )
     return false
   }
@@ -29,7 +29,7 @@ export const saveKeyValue = async (key, value) => {
       }
     } catch (error) {
       printError(
-        `[storage.service.js] with reading file with path: ${FILE_PATH}`
+        `[storage.service.js] with reading file with path: ${FILE_PATH}`,
       )
     }
 
@@ -38,7 +38,7 @@ export const saveKeyValue = async (key, value) => {
     await promises.writeFile(FILE_PATH, JSON.stringify(data))
   } catch (error) {
     printError(
-      `[storage.service.js] with writing data into file.\nkey: ${key}\nvalue: ${value}\nfile path: ${FILE_PATH}`
+      `[storage.service.js] with writing data into file.\nkey: ${key}\nvalue: ${value}\nfile path: ${FILE_PATH}`,
     )
   }
 }
@@ -53,7 +53,9 @@ export const getValueByKey = async (key) => {
       return data[key]
     }
   } catch (error) {
-    printError(`[storage.service.js] with getting value by key: ${key}`)
+    printError(
+      `[storage.service.js] with getting value by key - ${key}: ${error?.message}`,
+    )
   }
 
   return null
